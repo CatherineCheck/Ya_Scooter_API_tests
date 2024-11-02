@@ -1,0 +1,12 @@
+SELECT c.login,
+		COUNT(o.id) AS order_count
+FROM "Couriers" c LEFT JOIN "Orders" o ON c.id = o."courierId" 
+WHERE o."inDelivery" = true 
+GROUP BY c.login;
+
+Result:
+  login   | order_count
+----------+-------------
+ courier2 |           2
+(1 row)
+

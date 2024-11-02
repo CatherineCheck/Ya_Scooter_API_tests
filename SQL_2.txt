@@ -1,0 +1,18 @@
+SELECT track, 
+	CASE WHEN "inDelivery" = true THEN '1' 
+	WHEN cancelled = true THEN '-1' 
+	WHEN finished = true THEN '2' 
+	ELSE '0' 
+	END AS order_status 
+FROM "Orders";
+
+Result
+ track  | order_status
+--------+--------------
+ 325771 | 0
+ 727520 | 0
+ 521986 | 0
+ 876034 | -1
+ 250491 | 1
+ 250491 | 1
+(6 rows)
