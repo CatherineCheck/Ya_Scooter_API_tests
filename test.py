@@ -10,3 +10,5 @@ def test_get_order_by_track():
     response = requests.get(configuration.URL_SERVICE + configuration.GET_ORDER_PATH + str(track))
 
     assert response.status_code == 200
+
+# Екатерина Чекушкина, 23 когорта, Финальный проект. Инженер по тестированию плюс
